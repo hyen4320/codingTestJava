@@ -1,0 +1,29 @@
+package org.example.math;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class _4153 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        while(true){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            if(a==0){
+                return;
+            }
+            int b = Integer.parseInt(st.nextToken());
+            int c = Integer.parseInt(st.nextToken());
+
+            //뭐가 빗변인지 몰라서 다 때려넣어야 함
+            if((a*a+b*b==c*c)||(a*a+c*c==b*b)||(c*c+b*b==a*a)){
+                System.out.println("right");
+            }
+            else{
+                System.out.println("wrong");
+            }
+        }
+    }
+}
